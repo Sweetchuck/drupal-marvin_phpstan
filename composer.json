@@ -1,0 +1,60 @@
+{
+    "type": "drupal-drush",
+    "name": "drupal/marvin_phpstan",
+    "description": "",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "drupal",
+        "drush"
+    ],
+    "homepage": "https://drupal.org/project/marvin_phpstan",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/marvin_phpstan",
+        "source": "https://git.drupalcode.org/project/marvin_phpstan"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "repositories": {
+        "drupal/marvin": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin.git"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "consolidation/robo": "^4.0",
+        "drupal/marvin": "3.x-dev",
+        "phpstan/phpstan": "^1.10",
+        "sweetchuck/robo-phpstan": "2.x-dev"
+    },
+    "require-dev": {
+        "behat/mink": "^1.10",
+        "behat/mink-browserkit-driver": "^2.1",
+        "drush/drush": "^12.1",
+        "mikey179/vfsstream": "^1.6",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.0",
+        "symfony/browser-kit": "^6.3",
+        "symfony/phpunit-bridge": "^6.3",
+        "weitzman/drupal-test-traits": "^2.1"
+    },
+    "suggest": {
+        "drush/drush": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drush\\Commands\\marvin_phpstan\\": "Commands/marvin_phpstan/",
+            "Drupal\\marvin_phpstan\\": "src/"
+        }
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "*"
+            }
+        }
+    }
+}
