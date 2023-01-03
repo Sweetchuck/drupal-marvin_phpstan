@@ -1,0 +1,231 @@
+{
+    "type": "drupal-drush",
+    "name": "drupal/marvin_phpstan",
+    "description": "",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "drupal",
+        "drush"
+    ],
+    "homepage": "https://drupal.org/project/marvin_phpstan",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/marvin_phpstan",
+        "source": "https://git.drupalcode.org/project/marvin_phpstan"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        },
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "repositories": {
+        "drupal/marvin": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/drupal-marvin.git"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "consolidation/robo": "^4.0",
+        "drupal/marvin": "3.x-dev",
+        "sweetchuck/robo-phpstan": "2.x-dev"
+    },
+    "require-dev": {
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "behat/mink": "^1.10",
+        "behat/mink-browserkit-driver": "^2.1",
+        "composer/composer": "^2.5",
+        "composer/installers": "^1.6",
+        "cweagans/composer-patches": "^2.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "drupal/core-composer-scaffold": "^10.0",
+        "drupal/core-recommended": "^10.0",
+        "drush/drush": "^12.1",
+        "mikey179/vfsstream": "^1.6",
+        "nuvoleweb/robo-config": "^3.0",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "phpmd/phpmd": "^2.13",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.0",
+        "sweetchuck/robo-phpcs": "3.x-dev",
+        "sweetchuck/robo-phpmd": "3.x-dev",
+        "sweetchuck/utils": "1.x-dev",
+        "symfony/browser-kit": "^6.3",
+        "symfony/phpunit-bridge": "^6.3",
+        "weitzman/drupal-test-traits": "^2.1"
+    },
+    "suggest": {
+        "drush/drush": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drush\\Commands\\marvin_phpstan\\": "Commands/marvin_phpstan/",
+            "Drupal\\marvin_phpstan\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drupal\\Tests\\marvin_phpstan\\": "tests/src/",
+            "Drupal\\Tests\\": "tests/fixtures/project_01/docroot/core/tests/Drupal/Tests/",
+            "Drupal\\TestTools\\": "tests/fixtures/project_01/docroot/core/tests/Drupal/TestTools/",
+            "Drupal\\KernelTests\\": "tests/fixtures/project_01/docroot/core/tests/Drupal/KernelTests"
+        }
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "*"
+            }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "tests/fixtures/project_01/docroot/core": [
+                "type:drupal-core"
+            ],
+            "tests/fixtures/project_01/docroot/libraries/{$name}": [
+                "type:bower-asset",
+                "type:npm-asset",
+                "type:drupal-library"
+            ],
+            "tests/fixtures/project_01/docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "tests/fixtures/project_01/docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "tests/fixtures/project_01/docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "tests/fixtures/project_01/drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "tests/fixtures/project_01/docroot"
+            },
+            "file-mapping": {
+                "[web-root]/modules/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/modules/README.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/profiles/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/profiles/README.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/themes/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/themes/README.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/example.settings.local.php": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/sites/README.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/.csslintrc": {
+                    "mode": "skip"
+                },
+                "[web-root]/.editorconfig": {
+                    "mode": "skip"
+                },
+                "[web-root]/.eslintignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/.eslintrc.json": {
+                    "mode": "skip"
+                },
+                "[web-root]/.gitattributes": {
+                    "mode": "skip"
+                },
+                "[web-root]/.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/example.gitignore": {
+                    "mode": "skip"
+                },
+                "[web-root]/INSTALL.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/README.txt": {
+                    "mode": "skip"
+                },
+                "[web-root]/.htaccess": {
+                    "mode": "skip"
+                },
+                "[web-root]/web.config": {
+                    "mode": "skip"
+                },
+                "[project-root]/.editorconfig": {
+                    "mode": "skip"
+                }
+            },
+            "initial": {
+                "sites/default/default.services.yml": "sites/default/services.yml",
+                "sites/default/default.settings.php": "sites/default/settings.php"
+            }
+        },
+        "marvin_phpstan": {
+            "fixtures": {
+                "filesToSymlink": []
+            }
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "\\Drupal\\Tests\\marvin_phpstan\\Helper\\ComposerScripts::postInstallCmd"
+        ],
+        "post-update-cmd": [
+            "\\Drupal\\Tests\\marvin_phpstan\\Helper\\ComposerScripts::postUpdateCmd"
+        ],
+        "clean": [
+            "@clean:composer",
+            "@clean:reports"
+        ],
+        "clean:composer": [
+            "rm --recursive --force ./vendor/",
+            "git clean --force -d -x -- ./tests/",
+            "git clean --force -d -X -- ./tests/"
+        ],
+        "clean:reports": [
+            "test ! -d ./reports/ || find ./reports/ -mindepth 1 -maxdepth 1 -exec rm --recursive --force {} \\;"
+        ],
+        "test": [
+            "@clean:reports",
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": [
+            "mkdir -p ./reports/machine/coverage-php/",
+            "XDEBUG_MODE=coverage phpunit --testsuite Unit --coverage-html ./reports/human/coverage/Unit/html --testdox-html ./reports/human/testdox/Unit.html --coverage-clover ./reports/machine/coverage-clover/Unit.xml --coverage-php ./reports/machine/coverage-php/Unit.php --log-junit ./reports/machine/junit/Unit.xml"
+        ],
+        "test:integration": [
+            "mkdir -p ./reports/machine/coverage-php/",
+            "phpunit --testsuite Integration --coverage-html ./reports/human/coverage/Integration/html --testdox-html ./reports/human/testdox/Integration.html --coverage-clover ./reports/machine/coverage-clover/Integration.xml --coverage-php ./reports/machine/coverage-php/Integration.php --log-junit ./reports/machine/junit/Integration.xml"
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Robo\\\\Collection\\\\CollectionBuilder\\:\\:setAssetNamePrefix\\(\\)\\.$#"
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: "#^Call to an undefined method Robo\\\\Collection\\\\CollectionBuilder\\:\\:setInputFile\\(\\)\\.$#"
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: "#^Call to an undefined method Robo\\\\Collection\\\\CollectionBuilder\\|Sweetchuck\\\\Robo\\\\Git\\\\Task\\\\GitReadStagedFilesTask\\:\\:setCommandOnly\\(\\)\\.$#"
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: "#^Call to an undefined method Sweetchuck\\\\Robo\\\\Git\\\\Task\\\\GitReadStagedFilesTask\\:\\:deferTaskConfiguration\\(\\)\\.$#"
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: "#^Property RoboFile\\:\\:\\$environmentName \\('circleci'\\|'github\\-actions'\\|'gitlab'\\|'jenkins'\\|'local'\\|null\\) does not accept non\\-falsy\\-string\\|null\\.$#"
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: "#^Property RoboFile\\:\\:\\$environmentType \\('ci'\\|'local'\\|null\\) does not accept non\\-falsy\\-string\\|null\\.$#"
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: "#^Parameter \\#2 \\$callback of function array_filter expects callable\\(int\\|string\\)\\: mixed, Sweetchuck\\\\Utils\\\\Filter\\\\ArrayFilterFileSystemExists given\\.$#"
+			count: 1
+			path: ../tests/src/Helper/ComposerScripts.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: ../tests/src/Helper/ComposerScripts.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 2
+			path: ../tests/src/Helper/ComposerScripts.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: ../tests/src/Helper/DummyOutput.php
+
+		-
+			message: "#^Parameter \\#2 \\$commandFile of static method Robo\\\\Collection\\\\CollectionBuilder\\:\\:create\\(\\) expects Robo\\\\Tasks, null given\\.$#"
+			count: 1
+			path: ../tests/src/Helper/TaskBuilder.php
+
+		-
+			message: "#^Property Drupal\\\\Tests\\\\marvin_phpstan\\\\Unit\\\\Commands\\\\CommandsTestBase\\:\\:\\$commands \\(Drush\\\\Commands\\\\marvin\\\\CommandsBase\\) does not accept object\\.$#"
+			count: 1
+			path: ../tests/src/Unit/Commands/CommandsTestBase.php
