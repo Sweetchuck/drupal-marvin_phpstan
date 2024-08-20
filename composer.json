@@ -5,6 +5,7 @@
     "license": "GPL-3.0-or-later",
     "keywords": [
         "drupal",
+        "drupal-11",
         "drush"
     ],
     "homepage": "https://drupal.org/project/marvin_phpstan",
@@ -24,11 +25,11 @@
         }
     },
     "require": {
-        "php": ">=8.2",
-        "consolidation/robo": "^4.0",
-        "drupal/marvin": "3.x-dev",
-        "phpstan/phpstan": "^1.10",
-        "sweetchuck/robo-phpstan": "2.x-dev"
+        "php": ">=8.3",
+        "consolidation/robo": "^5.0",
+        "drupal/marvin": "4.x-dev",
+        "phpstan/phpstan": "^1.11",
+        "sweetchuck/robo-phpstan": "3.x-dev"
     },
     "require-dev": {
         "behat/mink": "^1.10",
@@ -42,7 +43,7 @@
         "weitzman/drupal-test-traits": "^2.1"
     },
     "suggest": {
-        "drush/drush": "^12.0"
+        "drush/drush": "^13.0"
     },
     "autoload": {
         "psr-4": {
