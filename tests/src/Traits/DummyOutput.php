@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\marvin_phpstan\Helper;
+namespace Drupal\Tests\marvin_phpstan\Traits;
 
 use Symfony\Component\Console\Formatter\OutputFormatterInterface;
 use Symfony\Component\Console\Output\ConsoleOutput;

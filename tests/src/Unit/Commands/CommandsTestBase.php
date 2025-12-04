@@ -62,7 +62,10 @@ class CommandsTestBase extends TestCase {
   }
 
   protected function setUpComposerInfo(): static {
-    $this->composerInfo = ComposerInfo::create($this->vfs->url() . '/project_01');
+    $this->composerInfo = ComposerInfo::create(
+      $this->vfs->url() . '/project_01',
+      'composer.json',
+    );
 
     return $this;
   }

@@ -9,6 +9,9 @@ use Robo\Contract\TaskInterface;
 use Sweetchuck\Robo\Phpstan\PhpstanTaskLoader;
 use Symfony\Component\Filesystem\Path;
 
+/**
+ * @deprecated
+ */
 class PhpstanAnalyzeCommandsBase extends LintCommandsBase {
 
   use PhpstanTaskLoader;
